@@ -19,16 +19,16 @@
              * loop through each value and call our image
              * loader on that image file
              */
-    urlOrArr.forEach(function(url) {
+      urlOrArr.forEach(function(url) {
       _load(url);
-    });
-    } 
+      });
+    }
     else {
             /* The developer did not pass an array to this function,
              * assume the value is a string and call our image loader
              * directly.
              */
-        _load(urlOrArr);
+      _load(urlOrArr);
     }
   }
     /* This is our private image loader function, it is
@@ -53,9 +53,9 @@
       * attempts to load this file in the future.
       */
         resourceCache[url] = img;
-        /* Once the image is actually loaded and properly cached,
-        * call all of the onReady() callbacks we have defined.
-        */
+      /* Once the image is actually loaded and properly cached,
+      * call all of the onReady() callbacks we have defined.
+      */
         if(isReady()) {
           readyCallbacks.forEach(function(func) { func(); });
         }
