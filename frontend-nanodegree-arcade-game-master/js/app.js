@@ -24,7 +24,7 @@ Enemy.prototype.update = function(dt) {
   if (this.x >= 550) {
     this.x = -200;
     var nH =  Math.floor((Math.random() * 10) + 1);
-   	if (nH <=2) {
+    if (nH <=2) {
       this.y =50;
       this.speed = 700;
     }
@@ -135,7 +135,7 @@ Player.prototype.handleInput = function(key) {
     }
 
     case 'right':
-      if(this.x == 400) {
+    if(this.x == 400) {
       this.x = 400;
       console.log("out of bounds");
       break;
